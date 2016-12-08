@@ -1,0 +1,20 @@
+{
+  "name": "sync",
+  "version": "0.0.1",
+  "description": "Service synchronizes ElasticSearch with client-data storage",
+  "main": "index.js",
+  "dependencies": {
+    "bunyan": "^1.8.5",
+    "commons": "git+ssh://git@bitbucket.org/egf2/commons.git",
+    "elasticsearch": "^12.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.10.2",
+    "eslint-config-xo": "^0.17.0"
+  },
+  "scripts": {
+    "start": "node index.js --config config.json",
+    "lint": "eslint ."
+  },
+  "license": "MIT"
+}
