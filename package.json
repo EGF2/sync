@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "bunyan": "^1.8.5",
-    "commons": "git+ssh://git@bitbucket.org/egf2/commons.git",
+    "commons": "git+https://github.com/EGF2/commons.git",
     "elasticsearch": "^12.1.0"
   },
   "devDependencies": {
