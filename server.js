@@ -49,7 +49,7 @@ Object.keys(config.elastic.indices).forEach(index => {
                     doc[field] = getValue(event.current, selector);
                 }
             });
-            if (Object.keys(doc).length) {
+            if (Object.keys(doc).length === 0) {
                 return Promise.resolve();
             }
             return elastic.update({
