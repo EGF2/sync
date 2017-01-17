@@ -25,6 +25,14 @@ function addToHandlers(key, handler) {
 Object.keys(config.elastic.indices).forEach(index => {
     let indexCfg = config.elastic.indices[index];
     if (indexCfg.object_type) {
+        // add mapping for id field
+        if (!indexCfg.mapping.id) {
+            indexCfg.mapping.id = {
+                type: "string",
+                index: "not_analyzed"
+            };
+        }
+
         // add POST handler
         addToHandlers(`POST ${indexCfg.object_type}`, event => {
             let body = {};
