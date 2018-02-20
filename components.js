@@ -3,7 +3,6 @@
 const option = require("commons/option");
 const elasticsearch = require("elasticsearch");
 const bunyan = require("bunyan");
-require("dotenv").config();
 
 function init() {
     return option().config.then(config => {
