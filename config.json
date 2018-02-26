@@ -1,4 +1,5 @@
 {
+  "port": 2021,
   "log_level": "info",
   "elastic": {
     "hosts": [
